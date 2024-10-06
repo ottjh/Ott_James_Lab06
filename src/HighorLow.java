@@ -48,14 +48,14 @@ public class HighorLow
         //I spent way too long on fixing that to determine both integer and range
         if (playerGuess == genNum)
         {
-            System.out.println("Your guess of " + playerGuess + " is right!");
+            System.out.println("\nYour guess of " + playerGuess + " is right!");
         } else if (playerGuess > genNum)
         {
-            System.out.println("Your guess of " + playerGuess + " is too high!.");
+            System.out.println("\nYour guess of " + playerGuess + " is too high!.");
         }
         else
         {
-            System.out.println("Your guess of " + playerGuess + " is too low!");
+            System.out.println("\nYour guess of " + playerGuess + " is too low!");
         }
         System.out.println("The random number is: " + genNum);
     }
