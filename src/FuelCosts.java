@@ -37,14 +37,14 @@ public class FuelCosts
 
         do {
             System.out.print("Enter your car's miles per gallon: ");
-            if (in.hasNextDouble()) // OK safe to read in an int
+            if (mpg.hasNextDouble()) // OK safe to read in an int
             {
-                milesPerGallon = in.nextDouble();
-                in.nextLine();
+                milesPerGallon = mpg.nextDouble();
+                mpg.nextLine();
                 done = true;
             } else {
 
-                trash = in.nextLine();
+                trash = mpg.nextLine();
                 System.out.println("\n You said your car's miles per gallon was: " + trash);
                 System.out.println("You have to enter a valid fuel efficiency.");
             }
@@ -59,18 +59,26 @@ public class FuelCosts
 
         do {
             System.out.print("Enter the price of a gallon of gas: ");
-            if (in.hasNextDouble()) // OK safe to read in an int
+            if (gallonP.hasNextDouble()) // OK safe to read in an int
             {
                 gallonPrice = gallonP.nextDouble();
-                in.nextLine();
+                gallonP.nextLine();
                 done = true;
             } else {
 
-                trash = in.nextLine();
+                trash = gallonP.nextLine();
                 System.out.println("\n You said the price of a gallon was: " + trash);
                 System.out.println("You have to enter a valid numeric monetary price.");
             }
         }while(!done);
+
+        //Now it's time to get the outputs ready
+
+        hundredCost = milesPerGallon * gallonPrice;
+        tankRange = milesPerGallon * capacityGas;
+
+        System.out.println("\nThe cost of driving a hundred miles is: " + hundredCost + " dollars.");
+        System.out.println("The range of a tank of gas is: " + tankRange + " miles.");
 
     }
 }
