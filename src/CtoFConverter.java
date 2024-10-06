@@ -35,7 +35,9 @@ public class CtoFConverter
 
         //Now we need to convert it and output it
 
-        fDegree=(9/5)*cDegree+32;
+        fDegree = ((double) 9 /5) * cDegree + 32;
+        //Had some issues with getting it to convert 100 C to 212F
+        //Thankfully it had a fix when I clicked on 9/5, but I need to be mindful of casts
         System.out.println("Your temperature in Fahrenheit is: " + fDegree + ".");
     }
 }
