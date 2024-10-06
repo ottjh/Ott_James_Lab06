@@ -22,7 +22,7 @@ public class HighorLow
         //Time to test for valid response
         do {
             Scanner in = new Scanner(System.in);
-            System.out.print("Enter your guess of a randomly generated number [1-10]: ");
+            System.out.print("\nEnter your guess of a randomly generated number [1-10]: ");
             if (in.hasNextInt())
             {
                 playerGuess = in.nextInt();
@@ -33,14 +33,14 @@ public class HighorLow
                 }
                 else
                 {
-                    System.out.println("Your guess of : " + playerGuess + " is out of range.");
+                    System.out.println("\nYour guess of : " + playerGuess + " is out of range.");
                     System.out.println("Please enter a whole number between 1 and 10");
                 }
             }
             else
             {
                 trash = in.nextLine();
-                System.out.println("\nYou guessed that the number was: " + trash);
+                System.out.println("\nYou guessed: " + trash);
                 System.out.println("You have to enter a valid whole number between 1 and 10.");
             }
         }while(!done);
