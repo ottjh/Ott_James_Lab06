@@ -33,7 +33,7 @@ public class HighorLow
                 }
                 else
                 {
-                    System.out.println("\nYour guess of : " + playerGuess + " is out of range.");
+                    System.out.println("\nYour guess of " + playerGuess + " is out of range.");
                     System.out.println("Please enter a whole number between 1 and 10");
                 }
             }
