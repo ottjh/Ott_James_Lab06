@@ -33,18 +33,18 @@ public class FuelCosts
         //Now to collect the other inputs
         done = false;
         //First time using a second scanner in the same class. Hope it goes okay.
-        Scanner mpg = new Scanner(System.in);
+        //Scanner mpg = new Scanner(System.in);
 
         do {
             System.out.print("Enter your car's miles per gallon: ");
-            if (mpg.hasNextDouble()) // OK safe to read in an int
+            if (in.hasNextDouble()) // OK safe to read in an int
             {
-                milesPerGallon = mpg.nextDouble();
-                mpg.nextLine();
+                milesPerGallon = in.nextDouble();
+                in.nextLine();
                 done = true;
             } else {
 
-                trash = mpg.nextLine();
+                trash = in.nextLine();
                 System.out.println("\n You said your car's miles per gallon was: " + trash);
                 System.out.println("You have to enter a valid fuel efficiency.");
             }
@@ -74,7 +74,7 @@ public class FuelCosts
 
         //Now it's time to get the outputs ready
 
-        hundredCost = milesPerGallon * gallonPrice;
+        hundredCost = ( 100 / milesPerGallon ) * gallonPrice;
         tankRange = milesPerGallon * capacityGas;
 
         System.out.println("\nThe cost of driving a hundred miles is: " + hundredCost + " dollars.");
